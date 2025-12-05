@@ -1,0 +1,59 @@
+---
+layout: default
+title: Participants & Registration
+permalink: /participants/
+---
+
+<section class="page-header">
+  <h1 class="page-title">Participants & Registration</h1>
+  <p class="page-subtitle">Join us at TDAbench 2026</p>
+</section>
+
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">Registration</h2>
+    <div class="card text-center">
+      <p>Registration for TDAbench 2026 will open on <strong>January 15, 2026</strong>.</p>
+      <p>Early bird registration ends <strong>February 15, 2026</strong>.</p>
+      <p class="mt-2">
+        <a href="#" class="btn btn--primary">Register (Coming Soon)</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="section-container">
+    <h2 class="section-title">Confirmed Participants</h2>
+    <p class="text-center text-muted mb-2">Participant list will be updated as registrations are confirmed.</p>
+    
+    <div class="participants-grid">
+      {% for participant in site.data.participants %}
+      <div class="participant-card">
+        <h4>{{ participant.name }}</h4>
+        <p>{{ participant.affiliation }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">Abstract Submission</h2>
+    <div class="card">
+      <p>We invite participants to submit abstracts for poster presentations and contributed talks. Topics of interest include:</p>
+      <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Machine learning methods for transient classification</li>
+        <li>Existing transient datasets and their characteristics</li>
+        <li>Data quality and label verification approaches</li>
+        <li>Benchmark design and evaluation metrics</li>
+        <li>Survey-specific challenges and solutions</li>
+      </ul>
+      <p><strong>Deadline:</strong> February 1, 2026</p>
+      <p class="mt-2">
+        <a href="#" class="btn btn--secondary">Submit Abstract (Coming Soon)</a>
+      </p>
+    </div>
+  </div>
+</section>

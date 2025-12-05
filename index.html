@@ -1,0 +1,86 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">TDAbench 2026</h1>
+    <p class="hero-subtitle">Benchmark Data Set for Machine Learning Classification of Astronomical Transients</p>
+    <p class="hero-date">March 9-12, 2026 • SkAI Institute • Chicago, IL</p>
+    <div class="mt-2">
+      <a href="{{ '/participants/' | relative_url }}" class="btn btn--primary">Register Now</a>
+      <a href="{{ '/program/' | relative_url }}" class="btn btn--secondary">View Program</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">Vision</h2>
+    <div class="card">
+      <p>TDAbench 2026 brings together astronomers, data scientists, and machine learning experts to address one of the most pressing challenges in time-domain astronomy: the development of a comprehensive, standardized benchmark dataset for the classification of astronomical transients.</p>
+      <p>As surveys like the Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST) prepare to discover millions of transient events nightly, the need for robust, well-characterized training data becomes paramount. Our workshop aims to establish community standards and create resources that will accelerate progress in automated transient classification.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="section-container">
+    <h2 class="section-title">Goals</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Define Standards</h3>
+        <p>Establish community-wide standards for transient classification taxonomy, data formats, and evaluation metrics that enable fair comparison of different ML approaches.</p>
+      </div>
+      <div class="card">
+        <h3>Curate Data</h3>
+        <p>Identify, collect, and curate high-quality labeled transient data from multiple surveys and sources to create a comprehensive training dataset.</p>
+      </div>
+      <div class="card">
+        <h3>Build Infrastructure</h3>
+        <p>Develop the technical infrastructure needed to host, distribute, and maintain the benchmark dataset for long-term community use.</p>
+      </div>
+      <div class="card">
+        <h3>Foster Collaboration</h3>
+        <p>Create lasting collaborations between survey teams, ML researchers, and domain experts to ensure the benchmark remains relevant and up-to-date.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">Data</h2>
+    <div class="card">
+      <p>The TDAbench dataset will encompass a diverse range of astronomical transients including:</p>
+      <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Supernovae (Type Ia, II, Ib/c, and subtypes)</li>
+        <li>Tidal Disruption Events (TDEs)</li>
+        <li>Active Galactic Nuclei (AGN) variability</li>
+        <li>Kilonovae and gravitational wave counterparts</li>
+        <li>Stellar flares and variable stars</li>
+        <li>Fast Radio Bursts (FRB) optical counterparts</li>
+        <li>And many more transient classes...</li>
+      </ul>
+      <p>Data will be drawn from major surveys including ZTF, ATLAS, Pan-STARRS, and archival sources, with careful attention to selection effects, completeness, and label quality.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="section-container">
+    <h2 class="section-title">Important Dates</h2>
+    <ul class="dates-list">
+      {% for item in site.data.dates %}
+      <li class="date-item">
+        <span class="date-badge">{{ item.date }}</span>
+        <div class="date-info">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.description }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

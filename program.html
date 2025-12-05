@@ -1,0 +1,46 @@
+---
+layout: default
+title: Program
+permalink: /program/
+---
+
+<section class="page-header">
+  <h1 class="page-title">Program</h1>
+  <p class="page-subtitle">Workshop schedule for TDAbench 2026</p>
+</section>
+
+<section class="section">
+  <div class="section-container">
+    <p class="text-center text-muted mb-2">The program is subject to change. All times are in Central Time (CT).</p>
+    
+    {% for day in site.data.program %}
+    <h2 style="margin-top: 3rem; margin-bottom: 1.5rem;">{{ day[1].date }}</h2>
+    <table class="program-table">
+      <thead>
+        <tr>
+          <th style="width: 150px;">Time</th>
+          <th>Event</th>
+          <th style="width: 200px;">Speaker</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in day[1].events %}
+        <tr>
+          <td>{{ event.time }}</td>
+          <td>
+            {% if event.type == "keynote" %}
+            <strong>{{ event.title }}</strong>
+            {% elsif event.type == "break" %}
+            <em>{{ event.title }}</em>
+            {% else %}
+            {{ event.title }}
+            {% endif %}
+          </td>
+          <td>{{ event.speaker }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+  </div>
+</section>

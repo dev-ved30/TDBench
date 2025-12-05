@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>TDAbench 2026</h3>
+        <p>Hosted at the SkAI Institute</p>
+        <p>Chicago, IL</p>
+        <p>March 9-12, 2026</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/program/' | relative_url }}">Program</a></li>
+          <li><a href="{{ '/participants/' | relative_url }}">Participants</a></li>
+          <li><a href="{{ '/travel/' | relative_url }}">Travel & Lodging</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p>GitHub: <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} TDAbench. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
