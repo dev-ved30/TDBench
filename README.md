@@ -1,124 +1,123 @@
 # TDAbench 2026 Website
 
-A modern, elegant Jekyll website for the TDAbench 2026 workshop on benchmark data sets for machine learning classification of astronomical transients.
+Official website for the TDAbench 2026 Workshop, hosted at the SkAI Institute in Chicago, IL from March 9-12, 2026.
 
-**Workshop Dates:** March 9-12, 2026  
-**Location:** SkAI Institute, Chicago, IL  
-**Website:** https://tdabench.github.io/TDABench2026
+## About
 
-## Features
+TDAbench 2026 is a collaborative workshop focused on developing a benchmark dataset for machine learning classification of astronomical transients.
 
-- Modern, responsive design with sleek blue color scheme
-- Mobile-friendly with hamburger menu
-- Easy-to-update YAML data files for program, participants, and dates
-- Animated hover effects and link interactions
-- SEO optimized with Jekyll SEO tag
-- GitHub Pages compatible
-
-## Local Development
-
-### Prerequisites
-
-- Ruby (2.7 or higher recommended)
-- Bundler (`gem install bundler`)
-
-### Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/TDABench/TDABench2026.git
-   cd TDABench2026
-   ```
-
-2. Install dependencies:
-   ```bash
-   bundle install
-   ```
-
-3. Run the local server:
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-4. Open your browser to `http://localhost:4000/TDABench2026/`
-
-## Project Structure
+## Website Structure
 
 ```
-.
-├── _config.yml          # Site configuration
-├── _data/
-│   ├── dates.yml        # Important dates
-│   ├── participants.yml # Participant list
-│   └── program.yml      # Workshop schedule
-├── _includes/
-│   ├── header.html      # Site header/navigation
-│   └── footer.html      # Site footer
-├── _layouts/
-│   └── default.html     # Main layout template
-├── _sass/
-│   └── main.scss        # Styles (SCSS)
-├── assets/
-│   ├── css/
-│   │   └── main.scss    # CSS entry point
-│   └── images/          # Image assets
-├── index.html           # Home page
-├── program.html         # Program page
-├── participants.html    # Participants & Registration
-└── travel.html          # Travel & Lodging
-```
-
-## Updating Content
-
-### Adding Participants
-
-Edit `_data/participants.yml`:
-
-```yaml
-- name: "Dr. Jane Smith"
-  affiliation: "University of Chicago"
-
-- name: "Prof. John Doe"
-  affiliation: "Caltech"
-```
-
-### Updating the Program
-
-Edit `_data/program.yml` to add or modify schedule items:
-
-```yaml
-day1:
-  date: "Monday, March 9, 2026"
-  events:
-    - time: "9:00 - 10:00"
-      title: "Session Title"
-      speaker: "Speaker Name"
-      type: "session"
-```
-
-### Updating Important Dates
-
-Edit `_data/dates.yml`:
-
-```yaml
-- date: "January 15, 2026"
-  title: "Registration Opens"
-  description: "Early bird registration begins"
+TDAbench2026/
+├── index.html          # Home page (Vision, Goals, Data, Important Dates)
+├── program.html        # Workshop program and schedule
+├── participants.html   # Participants list and registration info
+├── travel.html         # Travel and lodging information
+├── css/
+│   └── styles.css      # Main stylesheet
+└── README.md           # This file
 ```
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+This website is designed to be deployed on GitHub Pages without Jekyll processing. Simply push to the repository's `main` branch and enable GitHub Pages in the repository settings.
+
+### GitHub Pages Setup
+
+1. Go to repository Settings
+2. Navigate to Pages section
+3. Select "Deploy from a branch"
+4. Choose `main` branch and `/ (root)` folder
+5. Save
+
+The site will be available at: `https://tdabench.github.io/TDABench2026/`
+
+## Updating Content
+
+### Adding a New Participant
+
+In `participants.html`, find the participants grid and add a new card:
+
+```html
+<div class="participant-card">
+    <div class="participant-avatar">AB</div>
+    <h4>Participant Name</h4>
+    <p class="participant-affiliation">Institution Name</p>
+</div>
+```
+
+### Updating the Program Schedule
+
+In `program.html`, find the appropriate day's table and add/modify rows:
+
+```html
+<tr>
+    <td class="schedule-time">09:00 - 10:00</td>
+    <td>Session Title</td>
+    <td class="schedule-speaker">Speaker Name</td>
+</tr>
+```
+
+For breaks, use the `schedule-break` class:
+
+```html
+<tr class="schedule-break">
+    <td class="schedule-time">10:30 - 11:00</td>
+    <td colspan="2">Coffee Break</td>
+</tr>
+```
+
+### Updating Important Dates
+
+In `index.html`, find the dates timeline section and modify the date items:
+
+```html
+<div class="date-item">
+    <div class="date-badge">
+        <span class="month">Jan</span>
+        <span class="day">15</span>
+    </div>
+    <div class="date-content">
+        <h4>Event Title</h4>
+        <p>Event description.</p>
+    </div>
+</div>
+```
 
 ## Color Scheme
 
-The website uses a blue color palette inspired by the SkAI Institute:
+The website uses a blue color scheme inspired by the SkAI Institute logo:
 
-- Primary: `#0a1628` (Deep navy)
-- Secondary: `#1a2d4a` (Dark blue)
-- Accent: `#2d5a8a` (Medium blue)
-- Highlight: `#4a90d9` (Bright blue)
-- Light Accent: `#6bb3f0` (Light blue)
+- **Primary Dark**: `#0a1628`
+- **Primary**: `#1a365d`
+- **Primary Medium**: `#2c5282`
+- **Secondary**: `#3182ce`
+- **Accent**: `#4299e1`
+- **Light**: `#90cdf4`
+
+All colors are defined as CSS custom properties in `css/styles.css` for easy customization.
+
+## Features
+
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Mobile Navigation**: Hamburger menu for small screens
+- **Smooth Animations**: Hover effects, jiggle animations for links
+- **No White Backgrounds**: All sections use blue tints
+- **Easy to Update**: Clear HTML structure with comments
+- **No Build Step Required**: Pure HTML and CSS, no Jekyll needed
+
+## Browser Support
+
+The website is compatible with all modern browsers:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contact
+
+For questions about the website or the workshop, contact: tdabench2026@skai.edu
 
 ## License
 
